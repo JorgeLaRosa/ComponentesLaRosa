@@ -1,0 +1,8 @@
+*{
+    color:black;
+}
+
+li{
+    margin-top:10px;
+    border-bottom: 1px solid rgb(203, 203, 203);    
+}
