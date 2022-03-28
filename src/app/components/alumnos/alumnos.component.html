@@ -1,0 +1,35 @@
+<div>
+
+    <h1>Resultados finales</h1>
+    <div class="row"></div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+            <div class="row">
+                <div class="col-2">Matematicas</div>
+                <div class="col-2">Fisica</div>
+                <div class="col-2">Algebra</div>
+                <div class="col-2">Promedios</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngFor="let alumno of alumnos">
+        <div class="row border">
+            <div class="col-2">
+                <div>{{alumno.nombre}}</div>
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-2" *ngFor="let u of alumno.cursada" [style.color]="u.nota>5 ? 'green' : 'red'">
+                        {{u.nota}}</div>
+                    <div class="col-2">{{alumno.promedio}}
+                    </div>
+                    <div class="col-2"><button (click)="recursar(alumno.nombre)" *ngIf=" alumno.promedio<22"
+                            class="btn-xs btn-primary">Recursar</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

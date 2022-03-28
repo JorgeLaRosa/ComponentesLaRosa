@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { AlumnosComponent } from './components/alumnos/alumnos.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { MenuComponent } from './components/menu/menu.component';
     NavbarComponent,
     PostsComponent,
     MenuComponent,
+    AlumnosComponent,
   ],
   imports: [
     BrowserModule
