@@ -1,0 +1,33 @@
+<div class="container">
+
+    <form [formGroup]="formulario" (submit)="mande()" class="card mb-5" style="padding: 30px;">
+
+
+        <input id="nombre" placeholder="Nombre" type="text" formControlName="nombre">
+        <span style="color:red; margin:auto; font-size: 10px;" *ngIf="formulario.get('nombre')?.invalid">*Campo
+            obligatorio</span>
+
+
+        <br>
+
+
+        <input [style.border]="formulario.get('documento')?.invalid ? '1px solid red' : '1px solid green'"
+            placeholder="Documento" type="number" formControlName="documento">
+
+        <span style="color:red; font-size: 10px; margin: auto;" *ngIf="formulario.get('documento')?.invalid">*Campo
+            obligatorio</span>
+
+
+        <br>
+
+        <input placeholder="Contrasena" type="password" formControlName="apellido">
+
+        <br>
+
+
+
+        <button style="width: 40%; margin: auto;" class="btn btn-primary" type="submit"
+            [disabled]="formulario.invalid">Enviar</button>
+    </form>
+
+</div>
